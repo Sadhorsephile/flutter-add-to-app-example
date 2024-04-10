@@ -34,13 +34,17 @@
 <details>
     <summary>Android</summary>
 
-docs/a-example.mov
+
+
+https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/f60bf15c-1027-4cba-9c4f-21af0ef2ebea
+
+
 
 </details>
 
 <details>
     <summary>iOS</summary>
 
-docs/ios-example.mov
+https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/e6834067-1762-4a79-9d93-99555127a83c
 
 </details>
