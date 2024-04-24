@@ -16,8 +16,8 @@ class CustomCachedEngineFragmentBuilder(engineId: String) :
         args: UpdateFragmentArgs
     ): FlutterUpdateFragment {
         val frag = FlutterUpdateFragment(mTodoViewModel, args, mSharedViewModel)
-        val args = createArgs()
-        frag.arguments = args
+        frag.arguments = createArgs()
+
 
         return frag
     }

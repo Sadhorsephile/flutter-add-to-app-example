@@ -25,8 +25,10 @@ class ExampleFlutterActivity : FlutterActivity(), MethodCallHandler {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val engine = flutterEngine ?: return
+
         channel =
-            MethodChannel(flutterEngine!!.dartExecutor.binaryMessenger, "example_activity_channel")
+            MethodChannel(engine.dartExecutor.binaryMessenger, "example_activity_channel")
         channel.setMethodCallHandler(this)
         sendBatteryLevel()
     }

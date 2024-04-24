@@ -16,6 +16,9 @@ dependencies:
     path: ./modules/add_todo_module  
   edit_todo_module:
     path: ./modules/edit_todo_module
+  list_todos_module:
+    path: ./modules/list_todos_module
+  collection: 1.18.0
 
 dev_dependencies:
   flutter_test:

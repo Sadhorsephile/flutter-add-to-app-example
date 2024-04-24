@@ -12,8 +12,7 @@ class CustomCachedEngineFragmentBuilder(engineId: String) :
 
     fun buildWithParam(mSharedViewModel: SharedViewModel, mToDoViewModel: ToDoViewModel): FlutterAddFragment {
         val frag = FlutterAddFragment(mSharedViewModel, mToDoViewModel)
-        val args = createArgs()
-        frag.arguments = args
+        frag.arguments = createArgs()
 
         return frag
     }

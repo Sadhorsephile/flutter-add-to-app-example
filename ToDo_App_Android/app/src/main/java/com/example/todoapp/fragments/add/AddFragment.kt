@@ -27,7 +27,6 @@ class AddFragment : Fragment() {
     }
 
     private var flutterFragment: FlutterAddFragment? = null
-
     private val mToDoViewModel: ToDoViewModel by viewModels()
     private val mSharedViewModel: SharedViewModel by viewModels()
 
@@ -35,19 +34,18 @@ class AddFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentAddBinding.inflate(inflater, container, false)
 
         val fragmentManager: FragmentManager = parentFragmentManager
 
         flutterFragment = fragmentManager
-            .findFragmentByTag(TAG_FLUTTER_FRAGMENT) as FlutterAddFragment?
+            .findFragmentByTag(TAG_FLUTTER_FRAGMENT) as? FlutterAddFragment
 
         if (flutterFragment != null) {
             fragmentManager.beginTransaction().remove(flutterFragment as FlutterFragment).commit()
         }
 
-        var newFlutterFragment = CustomCachedEngineFragmentBuilder(
+        val newFlutterFragment = CustomCachedEngineFragmentBuilder(
             MainApplication.addTodoNoduleEngineId
         ).buildWithParam(mSharedViewModel, mToDoViewModel)
         flutterFragment = newFlutterFragment

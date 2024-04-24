@@ -40,13 +40,13 @@ class UpdateFragment : Fragment() {
         val fragmentManager: FragmentManager = parentFragmentManager
 
         flutterFragment = fragmentManager
-            .findFragmentByTag(UpdateFragment.TAG_FLUTTER_FRAGMENT) as FlutterUpdateFragment?
+            .findFragmentByTag(UpdateFragment.TAG_FLUTTER_FRAGMENT) as? FlutterUpdateFragment
 
         if (flutterFragment != null) {
             fragmentManager.beginTransaction().remove(flutterFragment as FlutterFragment).commit()
         }
 
-        var newFlutterFragment = CustomCachedEngineFragmentBuilder(
+        val newFlutterFragment = CustomCachedEngineFragmentBuilder(
             MainApplication.editTodoNoduleEngineId
         ).buildWithParams(
             mSharedViewModel,

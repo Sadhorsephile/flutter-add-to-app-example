@@ -16,6 +16,7 @@ class MainApplication : Application() {
         const val addTodoNoduleEngineId = "add_todo_engine"
         const val exampleActivityNoduleEngineId = "example_activity_engine"
         const val editTodoNoduleEngineId = "edit_todo_engine"
+        const val listTodosModuleEngineId = "list_todos_engine"
     }
 
     override fun onCreate() {
@@ -49,6 +50,15 @@ class MainApplication : Application() {
             "/for_activity"
         )
 
+        val listTodosEngine = engineGroup.createAndRunEngine(
+            this,
+            DartExecutor.DartEntrypoint(
+                pathToBundle,
+                "startListModule",
+
+                ),
+        )
+
         /// И регистрируем их в кэше.
 
         FlutterEngineCache.getInstance().put(
@@ -59,7 +69,10 @@ class MainApplication : Application() {
             editTodoNoduleEngineId,
             editTodoEngine,
         )
-
+        FlutterEngineCache.getInstance().put(
+            listTodosModuleEngineId,
+            listTodosEngine,
+        )
         FlutterEngineCache.getInstance().put(
             exampleActivityNoduleEngineId,
             exampleActivityEngine,
