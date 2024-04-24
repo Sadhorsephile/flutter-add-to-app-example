@@ -34,11 +34,7 @@
 <details>
     <summary>Android</summary>
 
-
-
-https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/f60bf15c-1027-4cba-9c4f-21af0ef2ebea
-
-
+https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/6a3e5d36-f056-47b1-9b0f-fa7c6b9b5c87
 
 </details>
 
