@@ -17,8 +17,8 @@
 		031596C822A5C661001BBA1B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C722A5C661001BBA1B /* UserData.swift */; };
 		031596CA22A5DDE0001BBA1B /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C922A5DDE0001BBA1B /* TaskEditView.swift */; };
 		031596CC22A5F360001BBA1B /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596CB22A5F360001BBA1B /* TaskItemView.swift */; };
+		763F07C6753A174923FA9DBE /* Pods_SwiftUITodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAC501515648D5481C5379 /* Pods_SwiftUITodo.framework */; };
 		C8E0A25922A789D100E940E8 /* UserDefaultsValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0A25822A789D100E940E8 /* UserDefaultsValue.swift */; };
-		F981B113E378DFE55D2BE2CE /* Pods_SwiftUITodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2326E4B494EFDFAAAA62CAE9 /* Pods_SwiftUITodo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		031596C722A5C661001BBA1B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		031596C922A5DDE0001BBA1B /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 		031596CB22A5F360001BBA1B /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
-		2326E4B494EFDFAAAA62CAE9 /* Pods_SwiftUITodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUITodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62E5C1F776C99D36E0632E09 /* Pods-SwiftUITodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITodo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUITodo/Pods-SwiftUITodo.debug.xcconfig"; sourceTree = "<group>"; };
-		85D9799624EFAE145F25473D /* Pods-SwiftUITodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITodo.release.xcconfig"; path = "Target Support Files/Pods-SwiftUITodo/Pods-SwiftUITodo.release.xcconfig"; sourceTree = "<group>"; };
+		2DCAC501515648D5481C5379 /* Pods_SwiftUITodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUITodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7495E04F35C0FDCB09FD89F1 /* Pods-SwiftUITodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITodo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUITodo/Pods-SwiftUITodo.debug.xcconfig"; sourceTree = "<group>"; };
+		B4E75E38AEACB31014C13783 /* Pods-SwiftUITodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUITodo.release.xcconfig"; path = "Target Support Files/Pods-SwiftUITodo/Pods-SwiftUITodo.release.xcconfig"; sourceTree = "<group>"; };
 		C8E0A25822A789D100E940E8 /* UserDefaultsValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F981B113E378DFE55D2BE2CE /* Pods_SwiftUITodo.framework in Frameworks */,
+				763F07C6753A174923FA9DBE /* Pods_SwiftUITodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +57,8 @@
 			children = (
 				031596AC22A5BDBA001BBA1B /* SwiftUITodo */,
 				031596AB22A5BDBA001BBA1B /* Products */,
-				2020010D351513B7F851B4FB /* Pods */,
-				DEB6DB5EE56801DE0CC86BB7 /* Frameworks */,
+				3452BB257915DDF8EF545164 /* Pods */,
+				2750309A8D92CD7EAA870CFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,22 +97,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2020010D351513B7F851B4FB /* Pods */ = {
+		2750309A8D92CD7EAA870CFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62E5C1F776C99D36E0632E09 /* Pods-SwiftUITodo.debug.xcconfig */,
-				85D9799624EFAE145F25473D /* Pods-SwiftUITodo.release.xcconfig */,
+				2DCAC501515648D5481C5379 /* Pods_SwiftUITodo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3452BB257915DDF8EF545164 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7495E04F35C0FDCB09FD89F1 /* Pods-SwiftUITodo.debug.xcconfig */,
+				B4E75E38AEACB31014C13783 /* Pods-SwiftUITodo.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		DEB6DB5EE56801DE0CC86BB7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2326E4B494EFDFAAAA62CAE9 /* Pods_SwiftUITodo.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,12 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 031596BE22A5BDBB001BBA1B /* Build configuration list for PBXNativeTarget "SwiftUITodo" */;
 			buildPhases = (
-				52651BCBF9784DA53ED9F76C /* [CP] Check Pods Manifest.lock */,
-				DDBA908D0C31E2771A37E329 /* [CP-User] Run Flutter Build flutter_module Script */,
+				1E9C00B4CD17832B145B072E /* [CP] Check Pods Manifest.lock */,
+				57148D0DA94FD64AE5625C84 /* [CP-User] Run Flutter Build flutter_module Script */,
 				031596A622A5BDBA001BBA1B /* Sources */,
 				031596A722A5BDBA001BBA1B /* Frameworks */,
 				031596A822A5BDBA001BBA1B /* Resources */,
-				7F7E3DB92F0D77935CCBAA23 /* [CP-User] Embed Flutter Build flutter_module Script */,
+				FD87B3311900C123385542C0 /* [CP-User] Embed Flutter Build flutter_module Script */,
 			);
 			buildRules = (
 			);
@@ -185,7 +185,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		52651BCBF9784DA53ED9F76C /* [CP] Check Pods Manifest.lock */ = {
+		1E9C00B4CD17832B145B072E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,17 +207,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F7E3DB92F0D77935CCBAA23 /* [CP-User] Embed Flutter Build flutter_module Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "[CP-User] Embed Flutter Build flutter_module Script";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
-		};
-		DDBA908D0C31E2771A37E329 /* [CP-User] Run Flutter Build flutter_module Script */ = {
+		57148D0DA94FD64AE5625C84 /* [CP-User] Run Flutter Build flutter_module Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,6 +216,16 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		FD87B3311900C123385542C0 /* [CP-User] Embed Flutter Build flutter_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build flutter_module Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -375,7 +375,7 @@
 		};
 		031596BF22A5BDBB001BBA1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62E5C1F776C99D36E0632E09 /* Pods-SwiftUITodo.debug.xcconfig */;
+			baseConfigurationReference = 7495E04F35C0FDCB09FD89F1 /* Pods-SwiftUITodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,7 +396,7 @@
 		};
 		031596C022A5BDBB001BBA1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85D9799624EFAE145F25473D /* Pods-SwiftUITodo.release.xcconfig */;
+			baseConfigurationReference = B4E75E38AEACB31014C13783 /* Pods-SwiftUITodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

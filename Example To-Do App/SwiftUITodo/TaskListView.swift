@@ -10,32 +10,65 @@ import SwiftUI
 import Flutter
 
 
+struct AddTodoBottomBlock: UIViewControllerRepresentable {
+    
+    var engine: FlutterEngine
+    var createTask: ((String) -> Void)
+    
+    func makeUIViewController(context: Context) -> FlutterViewController {
+        let controller = FlutterViewController(engine: engine, nibName: nil, bundle: nil)
+        let channel = FlutterMethodChannel(
+            name: "add_todo_channel",
+            binaryMessenger: controller.binaryMessenger
+        )
+        channel.setMethodCallHandler(
+            {
+                (call: FlutterMethodCall, result: FlutterResult) -> Void in
+                switch (call.method) {
+                case "addTodo":
+                    createTask(call.arguments as! String)
+                    result(true)
+                default:
+                    result(FlutterMethodNotImplemented)
+                }
+            }
+        )
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: FlutterViewController, context: Context) {
+        // Место для обновления конфигурации, исходя из нового состояния приложения
+    }
+}
+
 struct TaskListView: View {
     @EnvironmentObject var userData: UserData
     @EnvironmentObject var flutterDependencies: FlutterDependencies
     @State var draftTitle: String = ""
     @State var isEditing: Bool = false
     
+    
     var body: some View {
         NavigationView {
-            List {
-                Button(action: { showFlutter() }) {
-                  Text("Create a New task")
+            VStack{
+                List {
+                    ForEach(self.userData.tasks) { task in
+                        TaskItemView(task: task, isEditing: self.$isEditing)
+                    }
                 }
-                ForEach(self.userData.tasks) { task in
-                    TaskItemView(task: task, isEditing: self.$isEditing)
-                }
+                .navigationBarTitle(Text("Tasks 👀"))
+                .navigationBarItems(trailing: Button(action: {
+                    self.isEditing = !self.isEditing
+                }) {
+                    if !self.isEditing {
+                        Text("Edit")
+                    } else {
+                        Text("Done").bold()
+                    }
+                })
+                AddTodoBottomBlock(engine: flutterDependencies.addTodoFlutterEngine, createTask: createTask(title:)  ).frame(height: 300)
             }
-            .navigationBarTitle(Text("Tasks 👀"))
-            .navigationBarItems(trailing: Button(action: {
-                self.isEditing = !self.isEditing
-            }) {
-                if !self.isEditing {
-                    Text("Edit")
-                } else {
-                    Text("Done").bold()
-                }
-            })
+            
         }
     }
     
@@ -43,44 +76,6 @@ struct TaskListView: View {
         let newTask = Task(title: title, isDone: false)
         self.userData.tasks.insert(newTask, at: 0)
         self.draftTitle = ""
-    }
-    
-    func showFlutter() {
-        // Get the RootViewController.
-        guard
-            let windowScene = UIApplication.shared.connectedScenes
-                .first(where: { $0.activationState == .foregroundActive && $0 is UIWindowScene }) as? UIWindowScene,
-            let window = windowScene.windows.first(where: \.isKeyWindow),
-            let rootViewController = window.rootViewController
-        else { return }
-        
-        
-        let flutterViewController = FlutterViewController(
-            engine: flutterDependencies.addTodoFlutterEngine,
-            nibName: nil,
-            bundle: nil)
-        flutterViewController.modalPresentationStyle = .pageSheet
-        flutterViewController.isViewOpaque = false
-        
-        rootViewController.present(flutterViewController, animated: true)
-        
-        let channel = FlutterMethodChannel(
-            name: "add_todo_channel",
-            binaryMessenger: flutterViewController.binaryMessenger
-        )
-        channel.setMethodCallHandler(
-            {
-                (call: FlutterMethodCall, result: FlutterResult) -> Void in
-                switch (call.method) {
-                case "addTodo":
-                    createTask(title: call.arguments as! String)
-                    rootViewController.dismiss(animated: true)
-                    result(true)
-                default:
-                    result(FlutterMethodNotImplemented)
-                }
-            }
-        )
     }
 }
 
