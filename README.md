@@ -43,6 +43,6 @@ https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/6a3e
 <details>
     <summary>iOS</summary>
 
-https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/e6834067-1762-4a79-9d93-99555127a83c
+https://github.com/Sadhorsephile/flutter-add-to-app-example/assets/45498770/7298628a-beab-4122-9c7f-ad66e892d4d6
 
 </details>
